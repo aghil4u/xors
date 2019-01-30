@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -38,14 +39,14 @@ namespace Command
             tokenSource = new CancellationTokenSource();
 
             Console.WriteLine("-----------------------------------------------------");
-            Console.WriteLine("------------EQUIPMENT MASTER UPDATE--2.1--------------");
+            Console.WriteLine("------------EMMA SERVER UPDATE------3.5--------------");
             Console.WriteLine("-----------------------------------------------------");
            // Console.WriteLine(EQM);
 
             EqpRepo = new EquipmentRepo();
             EmpRepo = new EmployeeRepo();
 
-           
+           Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", @"C:\Dell\auth.json");
 
 
 
@@ -83,6 +84,14 @@ namespace Command
                         ProcessFar();
                         UploadFirestoreAsync();
                         break;
+
+                    case "FIREINTHEHOLE":
+                        ReadFar();
+                        ReadEqm();
+                        ProcessFar();
+                        UpdateFirestoreAsync();
+                        break;
+
                     case "UPLOAD EMPLOYEES":
                         UploadEmployees();
                         break;
@@ -143,8 +152,8 @@ namespace Command
          {"EquipmentLocation",equipment.EquipmentLocation},
 
     };
-                    DocumentReference document = await collection.AddAsync(user);
-                    Console.WriteLine("/rDone..."+i);
+                    await collection.Document(equipment.AssetNumber).SetAsync(user);
+                    Console.Write("\r"+i+" Lines Uploaded...");
 
 
 
@@ -159,6 +168,90 @@ namespace Command
 
         
         }
+
+
+        private static async Task UpdateFirestoreAsync()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" DOWNLOADING EQUIPMENT LIST FROM FIRESTORE");
+
+
+            FirestoreDb db = FirestoreDb.Create("mws-ams");
+            // [START fs_get_multiple_docs]
+            Query capitalQuery = db.Collection("assets"); //.WhereEqualTo("Capital", true);
+            QuerySnapshot capitalQuerySnapshot = await capitalQuery.GetSnapshotAsync();
+
+
+
+            for (int i = 0; i < Equipments.Count; i++)
+            {
+                Equipment equipment = Equipments[i];
+                try
+                {
+                    DocumentSnapshot eqsnapshot = capitalQuerySnapshot.Documents.FirstOrDefault(e=>e.Id==equipment.AssetNumber);
+                    if (eqsnapshot == null)
+                    {
+//                        Dictionary<string, object> user = new Dictionary<string, object>
+//                        {
+//                            { "AssetNumber", equipment.AssetNumber },
+//                            { "EquipmentNumber",  equipment.EquipmentNumber },
+//
+//                            {"AcquisitionDate" , equipment.AcquisitionDate.ToUniversalTime()},
+//                            {"PendingUpdate" ,equipment.PendingUpdate},
+//                            {"AcquisitionValue" ,equipment.AcquisitionValue},
+//                            {"BookValue",equipment.BookValue},
+//                            {"AssetDescription" ,equipment.AssetDescription},
+//                            {"EquipmentDescription" ,equipment.EquipmentDescription},
+//                            {"OperationId",equipment.OperationId},
+//                            {"SubType",equipment.SubType},
+//                            {"Weight",equipment.Weight},
+//                            {"WeightUnit" ,equipment.WeightUnit},
+//                            {"Dimensions",equipment.Dimensions},
+//                            {"Tag",equipment.Tag},
+//                            {"Type" ,equipment.Type},
+//                            {"Connection" ,equipment.Connection},
+//                            {"Length",equipment.Length},
+//                            {"ModelNumber" ,equipment.ModelNumber},
+//                            {"SerialNumber",equipment.SerialNumber},
+//                            {"AssetLocation" ,equipment.AssetLocation},
+//                            {"AssetLocationText" ,equipment.AssetLocationText},
+//                            {"EquipmentLocation",equipment.EquipmentLocation},
+//
+//                        };
+                        await db.Collection("assets").Document(equipment.AssetNumber).SetAsync(equipment);
+                    }
+                    else
+                    {
+                        Equipment serverEquipment = eqsnapshot.ConvertTo<Equipment>();
+                        if (serverEquipment.EquipmentDescription!=equipment.EquipmentDescription)
+                        {
+                            serverEquipment.EquipmentDescription = equipment.EquipmentDescription;
+
+                            await db.Collection("assets").Document(equipment.AssetNumber).SetAsync(equipment);
+                        }
+
+                    }
+
+                    
+                    Console.Write("\r UPDATING "+i+ " OF "+Equipments.Count);
+
+
+
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e.Message);
+                }
+            }
+
+
+
+          
+
+        }
+
+   
 
         private static void WipeEquipments()
         {
