@@ -1,0 +1,11 @@
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Release\netcoreapp2.1\Command.deps.json
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Release\netcoreapp2.1\Command.runtimeconfig.json
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Release\netcoreapp2.1\Command.runtimeconfig.dev.json
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Release\netcoreapp2.1\Command.dll
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Release\netcoreapp2.1\Command.pdb
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Release\netcoreapp2.1\Command.csprojAssemblyReference.cache
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Release\netcoreapp2.1\Command.csproj.CoreCompileInputs.cache
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Release\netcoreapp2.1\Command.AssemblyInfoInputs.cache
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Release\netcoreapp2.1\Command.AssemblyInfo.cs
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Release\netcoreapp2.1\Command.dll
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Release\netcoreapp2.1\Command.pdb
