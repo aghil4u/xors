@@ -32,7 +32,7 @@ namespace Server.Controllers
         public  IEnumerable<Equipment> GetEquipmentAsync([FromRoute] long timestamp)
         {
         
-            var equipments =  _context.Equipment.Where(e=>e.TimeStamp>timestamp);
+            var equipments =  _context.Equipment.Where(e=>e.TimeStamp>=timestamp);
             
             return equipments;
 

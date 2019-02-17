@@ -292,6 +292,8 @@ namespace Server.Data.Migrations
 
                     b.Property<string>("Location");
 
+                    b.Property<long>("TimeStamp");
+
                     b.Property<string>("Type");
 
                     b.Property<string>("User");
