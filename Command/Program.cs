@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Google.Cloud.Firestore;
+using Google.Protobuf.WellKnownTypes;
 using OfficeOpenXml;
 using Server.Models;
 
@@ -150,6 +152,7 @@ namespace Command
          {"AssetLocation" ,equipment.AssetLocation},
          {"AssetLocationText" ,equipment.AssetLocationText},
          {"EquipmentLocation",equipment.EquipmentLocation},
+         {"TimeStamp",DateTime.UtcNow.ToString("yyyyMMddHHmmssffff")},
 
     };
                     await collection.Document(equipment.AssetNumber).SetAsync(user);
@@ -180,12 +183,14 @@ namespace Command
             // [START fs_get_multiple_docs]
             Query capitalQuery = db.Collection("assets"); //.WhereEqualTo("Capital", true);
             QuerySnapshot capitalQuerySnapshot = await capitalQuery.GetSnapshotAsync();
-
+            Console.WriteLine();
+            Console.WriteLine(" DOWNLOAD COMPLETED. NOW PROCESSING");
 
 
             for (int i = 0; i < Equipments.Count; i++)
             {
                 Equipment equipment = Equipments[i];
+                equipment.TimeStamp = long.Parse(DateTime.UtcNow.ToString("yyyyMMddHHmmssffff"));
                 try
                 {
                     DocumentSnapshot eqsnapshot = capitalQuerySnapshot.Documents.FirstOrDefault(e=>e.Id==equipment.AssetNumber);
@@ -218,6 +223,7 @@ namespace Command
 //                            {"EquipmentLocation",equipment.EquipmentLocation},
 //
 //                        };
+
                         await db.Collection("assets").Document(equipment.AssetNumber).SetAsync(equipment);
                     }
                     else
@@ -362,7 +368,9 @@ namespace Command
                             eServer.EquipmentDescription = eLocal.EquipmentDescription;
                             eServer.AssetDescription = eLocal.AssetDescription;
                             eServer.OperationId = eLocal.OperationId;
+                            eServer.TimeStamp = long.Parse(DateTime.UtcNow.ToString("yyyyMMddHHmmssffff"));
                             EquipmentsToUpdate.Add(eServer);
+
                         }
                     }
                     else
