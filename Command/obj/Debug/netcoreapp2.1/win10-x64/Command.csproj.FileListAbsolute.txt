@@ -1,0 +1,14 @@
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\hostpolicy.dll
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\hostfxr.dll
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\Command.exe
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\Command.deps.json
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\Command.runtimeconfig.json
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\Command.runtimeconfig.dev.json
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\Command.dll
+D:\Aghils\CODEBASE\VS\xors\Command\bin\Debug\netcoreapp2.1\win10-x64\Command.pdb
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\win10-x64\Command.csprojAssemblyReference.cache
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\win10-x64\Command.csproj.CoreCompileInputs.cache
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\win10-x64\Command.AssemblyInfoInputs.cache
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\win10-x64\Command.AssemblyInfo.cs
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\win10-x64\Command.dll
+D:\Aghils\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\win10-x64\Command.pdb

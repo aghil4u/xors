@@ -29,6 +29,17 @@ namespace Server.Controllers
             return _context.Verification;
         }
 
+
+        [HttpGet("timestamp/{TimeStamp}")]
+        public IEnumerable<Verification> GetVerificationAsync([FromRoute] long timestamp)
+        {
+
+            var verifications = _context.Verification.Where(e => e.TimeStamp >= timestamp);
+
+            return verifications;
+
+        }
+
         // GET: api/Verifications/5
 
         //[HttpGet("{id}")]

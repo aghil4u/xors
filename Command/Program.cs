@@ -368,14 +368,18 @@ namespace Command
                             eServer.EquipmentDescription = eLocal.EquipmentDescription;
                             eServer.AssetDescription = eLocal.AssetDescription;
                             eServer.OperationId = eLocal.OperationId;
-                            eServer.TimeStamp = long.Parse(DateTime.UtcNow.ToString("yyyyMMddHHmmssffff"));
+                            DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                            eServer.TimeStamp = (long)((DateTime.Now.ToUniversalTime() - epoch).TotalMilliseconds);
                             EquipmentsToUpdate.Add(eServer);
 
                         }
                     }
                     else
                     {
+                        
                         Additions++;
+                        DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                        eLocal.TimeStamp = (long)((DateTime.Now.ToUniversalTime() - epoch).TotalMilliseconds);
                         EquipmentsToAdd.Add(eLocal); 
                     }
 

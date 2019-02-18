@@ -19,6 +19,7 @@ namespace Server.Models
         public string AssetNumber { get; set; }
         public string EquipmentNumber { get; set; }
         public string AssetDescription { get; set; }
+        public long TimeStamp { get; set; }
 
     }
 }
