@@ -55,5 +55,6 @@ namespace Server.Models
         public string EquipmentLocation { get; set; }
         [FirestoreProperty]
         public long TimeStamp { get; set; }
+        public long LastVerification { get; set; }
     }
 }

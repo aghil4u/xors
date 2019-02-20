@@ -245,6 +245,8 @@ namespace Server.Data.Migrations
 
                     b.Property<string>("EquipmentNumber");
 
+                    b.Property<long>("LastVerification");
+
                     b.Property<string>("Length");
 
                     b.Property<string>("ModelNumber");

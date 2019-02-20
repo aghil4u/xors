@@ -29,5 +29,6 @@ namespace Server.Models
         public string AssetLocationText { get; set; }
         public string EquipmentLocation { get; set; }
         public long TimeStamp { get; set; }
+        public long LastVerification { get; set; }
     }
 }
