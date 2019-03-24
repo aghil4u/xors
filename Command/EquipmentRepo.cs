@@ -16,7 +16,7 @@ namespace Command
 
         public EquipmentRepo()
         {
-            client.BaseAddress = new Uri("http://xo.rs/");
+            client.BaseAddress = new Uri("http://mwsams.xo.rs/");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -26,6 +26,10 @@ namespace Command
             Console.WriteLine(" DOWNLOADING EQUIPMENT LIST FROM SERVER");
 
             HttpResponseMessage response =  client.GetAsync("api/Equipments").Result;
+            if (response == null)
+            {
+                return new List<Equipment>();
+            }
             if (response.IsSuccessStatusCode)
             {
                 var stringResult =  response.Content.ReadAsStringAsync().Result;
@@ -64,11 +68,13 @@ namespace Command
             for (int i = 0; i < eqpt.Count; i++)
             {
                 Equipment equipment = eqpt[i];
+
                 HttpResponseMessage response = client.PostAsync("api/Equipments",
                     new StringContent(JsonConvert.SerializeObject(equipment), Encoding.UTF8, "application/json")).Result;
                 if (!response.IsSuccessStatusCode)
                 {
                     failCount++;
+                    Console.Write(response.Headers.ToString());
                 }
                 Console.Write("\r ADDING ITEM " + i + "/" + eqpt.Count + " (FAILS " + failCount + ")");
             }
@@ -131,6 +137,23 @@ namespace Command
             }
 
             return new List<Verification>();
+        }
+
+        internal void UpdateVerifications(List<Verification> verifications)
+        {
+            int failCount = 0;
+            for (int i = 0; i < verifications.Count; i++)
+            {
+                Verification ver = verifications[i];
+                HttpResponseMessage response = client.PutAsync("api/Verifications/" + ver.id,
+                    new StringContent(JsonConvert.SerializeObject(ver), Encoding.UTF8, "application/json")).Result;
+                if (!response.IsSuccessStatusCode)
+                {
+                    failCount++;
+                }
+                Console.Write("\r UPDATING EQUIPMENT " + i + "/" + verifications.Count + " (FAILS " + failCount + ")");
+            }
+
         }
     }
 }

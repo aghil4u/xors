@@ -28,6 +28,16 @@ namespace Server.Controllers
             return _context.Equipment;
         }
 
+        [HttpGet("timestamp/{TimeStamp}")]
+        public  IEnumerable<Equipment> GetEquipmentAsync([FromRoute] long timestamp)
+        {
+        
+            var equipments =  _context.Equipment.Where(e=>e.TimeStamp>timestamp);
+            
+            return equipments;
+
+        }
+
         // GET: api/Equipments/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEquipment([FromRoute] int id)
@@ -90,7 +100,7 @@ namespace Server.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            equipment.id = _context.Equipment.Last().id + 1;
             _context.Equipment.Add(equipment);
             await _context.SaveChangesAsync();
 

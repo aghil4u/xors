@@ -52,5 +52,7 @@ namespace Server.Models
         public string AssetLocationText { get; set; }
         [FirestoreProperty]
         public string EquipmentLocation { get; set; }
+        [FirestoreProperty]
+        public long TimeStamp { get; set; }
     }
 }

@@ -78,6 +78,9 @@ namespace Command
                     case "UPLOAD":
                         UploadEquipments();
                         break;
+                    case "INITIAL UPLOAD":
+                        InitialUpload();
+                        break;
                     case "FIRE":
                         ReadFar();
                         ReadEqm();
@@ -104,11 +107,54 @@ namespace Command
                     case "WIPE VERIFICATIONS":
                         WipeVerifications();
                         break;
+
+                    case "CORRECT":
+                        CorrectImageSource();
+                        break;
                     default:
                         Console.WriteLine("UNIDENTIFIED COMMAND");
                         HandleCommand();
                         break;
                 }
+        }
+
+        private static void CorrectImageSource()
+        {
+            Console.WriteLine();
+
+            List<Verification> eListServer = EqpRepo.GetVerifications();
+            List<Verification> EquipmentsToUpdate = new List<Verification>();
+  
+            int Updates = 0;
+            int Additions = 0;
+            for (int i = 0; i < eListServer.Count; i++)
+            {
+                try
+                {
+
+                    Verification eServer = eListServer[i];
+                    if (eServer != null)
+                    {
+                        if (eServer.ImageUrl != "") 
+                        {
+                            eServer.ImageUrl = eServer.ImageUrl.Substring(12);
+
+                            EquipmentsToUpdate.Add(eServer);
+                        }
+                    }
+
+
+                    Console.Write("\r FOUND " + Updates + " UPDATES & " + Additions + " ADDITIONS");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+
+            }
+            Console.WriteLine("UPLOADING UPDATES TO SERVER");
+            if (EquipmentsToUpdate.Count > 0) EqpRepo.UpdateVerifications(EquipmentsToUpdate);
+
         }
 
         private static async Task UploadFirestoreAsync()
@@ -282,6 +328,21 @@ namespace Command
             ProcessFar();
             UpdateEquipmentListToServer();
         }
+
+        private static void InitialUpload()
+        {
+
+            ReadFar();
+            ReadEqm();
+            ProcessFar();
+            InitialUploadEquipmentListToServer();
+        }
+
+        private static void InitialUploadEquipmentListToServer()
+        {
+            EqpRepo.AddEquipments(Equipments);
+        }
+
         private static void UploadEmployees()
         {
 
@@ -342,7 +403,7 @@ namespace Command
         private static void UpdateEquipmentListToServer()
         {
             Console.WriteLine();
-           
+            //List<Equipment> eListServer = new List<Equipment>();
             List<Equipment> eListServer = EqpRepo.GetEquipments();
             List<Equipment> EquipmentsToUpdate = new List<Equipment>();
             List<Equipment> EquipmentsToAdd = new List<Equipment>();
@@ -362,12 +423,17 @@ namespace Command
                             eServer.EquipmentDescription = eLocal.EquipmentDescription;
                             eServer.AssetDescription = eLocal.AssetDescription;
                             eServer.OperationId = eLocal.OperationId;
+                            DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                            eServer.TimeStamp = (long)((DateTime.Now.ToUniversalTime() - epoch).TotalMilliseconds);
                             EquipmentsToUpdate.Add(eServer);
                         }
                     }
                     else
                     {
+                        
                         Additions++;
+                        DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                        eLocal.TimeStamp = (long)((DateTime.Now.ToUniversalTime() - epoch).TotalMilliseconds);
                         EquipmentsToAdd.Add(eLocal); 
                     }
 
@@ -375,7 +441,7 @@ namespace Command
                 }
                 catch (Exception e)
                 {
-                  // Console.WriteLine(e.Message);
+                  Console.WriteLine(e.Message);
                 }
 
             }

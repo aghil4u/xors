@@ -31,3 +31,14 @@ D:\OFFICE\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\Command.AssemblyInfoI
 D:\OFFICE\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\Command.AssemblyInfo.cs
 D:\OFFICE\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\Command.dll
 D:\OFFICE\CODEBASE\VS\xors\Command\obj\Debug\netcoreapp2.1\Command.pdb
+C:\Users\Aghil\Documents\GitHub\xors\Command\bin\Debug\netcoreapp2.1\Command.deps.json
+C:\Users\Aghil\Documents\GitHub\xors\Command\bin\Debug\netcoreapp2.1\Command.runtimeconfig.json
+C:\Users\Aghil\Documents\GitHub\xors\Command\bin\Debug\netcoreapp2.1\Command.runtimeconfig.dev.json
+C:\Users\Aghil\Documents\GitHub\xors\Command\bin\Debug\netcoreapp2.1\Command.dll
+C:\Users\Aghil\Documents\GitHub\xors\Command\bin\Debug\netcoreapp2.1\Command.pdb
+C:\Users\Aghil\Documents\GitHub\xors\Command\obj\Debug\netcoreapp2.1\Command.csproj.CoreCompileInputs.cache
+C:\Users\Aghil\Documents\GitHub\xors\Command\obj\Debug\netcoreapp2.1\Command.AssemblyInfoInputs.cache
+C:\Users\Aghil\Documents\GitHub\xors\Command\obj\Debug\netcoreapp2.1\Command.AssemblyInfo.cs
+C:\Users\Aghil\Documents\GitHub\xors\Command\obj\Debug\netcoreapp2.1\Command.dll
+C:\Users\Aghil\Documents\GitHub\xors\Command\obj\Debug\netcoreapp2.1\Command.pdb
+C:\Users\Aghil\Documents\GitHub\xors\Command\obj\Debug\netcoreapp2.1\Command.csprojAssemblyReference.cache
