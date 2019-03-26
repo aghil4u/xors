@@ -16,7 +16,7 @@ namespace Command
 
         public EmployeeRepo()
         {
-            client.BaseAddress = new Uri("http://xo.rs/");
+            client.BaseAddress = new Uri("http://mwsams.xo.rs/");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }

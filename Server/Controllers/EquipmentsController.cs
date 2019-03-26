@@ -32,7 +32,7 @@ namespace Server.Controllers
         public  IEnumerable<Equipment> GetEquipmentAsync([FromRoute] long timestamp)
         {
         
-            var equipments =  _context.Equipment.Where(e=>e.TimeStamp>=timestamp);
+            var equipments =  _context.Equipment.Where(e=>e.TimeStamp>timestamp);
             
             return equipments;
 
@@ -100,7 +100,7 @@ namespace Server.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            equipment.id = _context.Equipment.Last().id + 1;
             _context.Equipment.Add(equipment);
             await _context.SaveChangesAsync();
 

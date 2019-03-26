@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Numerics;
 using Google.Cloud.Firestore;
 
 namespace Server.Models
@@ -55,6 +54,5 @@ namespace Server.Models
         public string EquipmentLocation { get; set; }
         [FirestoreProperty]
         public long TimeStamp { get; set; }
-        public long LastVerification { get; set; }
     }
 }
