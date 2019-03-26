@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,12 +23,13 @@ namespace Server.Controllers
         }
 
         // GET: api/Equipments
+       // [Authorize]
         [HttpGet]
         public IEnumerable<Equipment> GetEquipment()
         {
             return _context.Equipment;
         }
-
+       // [Authorize]
         [HttpGet("timestamp/{TimeStamp}")]
         public  IEnumerable<Equipment> GetEquipmentAsync([FromRoute] long timestamp)
         {
