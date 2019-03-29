@@ -12552,11 +12552,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aghil\\Documents\\GitHub\\xors\\Server\\Server.csproj",
+      "projectUniqueName": "D:\\OFFICE\\CODEBASE\\VS\\xors\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Users\\Aghil\\Documents\\GitHub\\xors\\Server\\Server.csproj",
+      "projectPath": "D:\\OFFICE\\CODEBASE\\VS\\xors\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\Aghil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aghil\\Documents\\GitHub\\xors\\Server\\obj\\",
+      "outputPath": "D:\\OFFICE\\CODEBASE\\VS\\xors\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

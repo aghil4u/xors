@@ -14,7 +14,7 @@ using Server.Models;
 
 namespace Server.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -52,7 +52,7 @@ namespace Server.Controllers
 
                 var signinKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("MySuperSecureKey"));
                 var token = new JwtSecurityToken(
-                    issuer: "http://xo.rs", audience: "http://xo.rs", expires:DateTime.UtcNow.AddHours(1),
+                    issuer: "http://xo.rs", audience: "http://xo.rs", expires:DateTime.UtcNow.AddMonths(1),
                     claims:claims,
                     signingCredentials: new Microsoft.IdentityModel.Tokens.SigningCredentials(signinKey,SecurityAlgorithms.HmacSha256));
                 return Ok(new
