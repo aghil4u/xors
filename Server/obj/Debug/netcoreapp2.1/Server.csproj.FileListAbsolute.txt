@@ -101,3 +101,4 @@ C:\Users\Aghil\Documents\GitHub\xors\Server\obj\Debug\netcoreapp2.1\Server.Razor
 C:\Users\Aghil\Documents\GitHub\xors\Server\obj\Debug\netcoreapp2.1\Server.Views.pdb
 C:\Users\Aghil\Documents\GitHub\xors\Server\obj\Debug\netcoreapp2.1\Server.csproj.CopyComplete
 C:\Users\Aghil\Documents\GitHub\xors\Server\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+D:\OFFICE\CODEBASE\VS\xors\Server\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

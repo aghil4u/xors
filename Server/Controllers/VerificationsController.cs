@@ -121,7 +121,7 @@ namespace Server.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            verification.id = _context.Verification.LastOrDefault().id + 1;
             _context.Verification.Add(verification);
             await _context.SaveChangesAsync();
 
