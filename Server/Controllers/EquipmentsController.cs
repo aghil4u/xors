@@ -96,17 +96,18 @@ namespace Server.Controllers
 
         // POST: api/Equipments
         [HttpPost]
-        public async Task<IActionResult> PostEquipment([FromBody] Equipment equipment)
+        public  async Task<IActionResult> PostEquipment([FromBody] Equipment equipment)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return  BadRequest(ModelState);
             }
             equipment.id = _context.Equipment.Last().id + 1;
+     
             _context.Equipment.Add(equipment);
-            await _context.SaveChangesAsync();
+            await  _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetEquipment", new { id = equipment.id }, equipment);
+            return  CreatedAtAction("GetEquipment", new { id = equipment.id }, equipment);
         }
 
         // DELETE: api/Equipments/5

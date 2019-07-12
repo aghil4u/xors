@@ -22,8 +22,8 @@ namespace Command
         private static EquipmentRepo EqpRepo;
         private static EmployeeRepo EmpRepo;
         public static string BaseDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.Parent.Parent.Parent.Parent.ToString();
-        public static string FAR = BaseDirectory+@"\ASSETS\FAR.xlsx";
-        public static string EQM = BaseDirectory+@"\ASSETS\EQM.xlsx";
+        public static string FAR = BaseDirectory+@"\ASSETS\FAR 3010.xlsx";
+        public static string EQM = BaseDirectory+@"\ASSETS\EQM 3010.xlsx";
         public static string EMP = BaseDirectory+@"\OTHERS\EMPLIST.xlsx";
         public static List<Equipment> ETEMP = new List<Equipment>();
         public static List<Equipment> Equipments = new List<Equipment>();
@@ -572,7 +572,8 @@ namespace Command
                     e.EquipmentNumber = myWorksheet.Cells[i, 3].Text.Trim();
                     e.AssetDescription = myWorksheet.Cells[i, 5].Text.Trim();
                     e.AssetLocation = myWorksheet.Cells[i, 10].Text.Trim();
-               
+                    e.plant = myWorksheet.Cells[i, 14].Text.Trim();
+
                     if (e.AssetNumber != "" && e.AssetNumber != "Asset") Equipments.Add(e);
                     
                     Console.Write("\r READING FAR " + i);

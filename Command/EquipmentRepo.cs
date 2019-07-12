@@ -16,7 +16,8 @@ namespace Command
 
         public EquipmentRepo()
         {
-            client.BaseAddress = new Uri("http://mwsams.xo.rs/");
+             //client.BaseAddress = new Uri("http://mwsams.xo.rs/");
+            client.BaseAddress = new Uri("https://localhost:44363/");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }

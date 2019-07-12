@@ -29,5 +29,7 @@ namespace Server.Models
         public string AssetLocationText { get; set; }
         public string EquipmentLocation { get; set; }
         public long TimeStamp { get; set; }
+
+        public string plant { get; set; }
     }
 }
