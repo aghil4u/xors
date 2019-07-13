@@ -78,7 +78,8 @@ namespace Command
                         Environment.Exit(0);
                         break;
                     case "UPLOAD":
-                        UploadEquipments();
+                        // UploadEquipments();
+                        SmartUploadEquipments();
                         break;
                     case "INITIAL UPLOAD":
                         InitialUpload();
@@ -335,6 +336,15 @@ namespace Command
             UpdateEquipmentListToServer();
         }
 
+        private static void SmartUploadEquipments()
+        {
+
+            ReadFar();
+            ReadEqm();
+            ProcessFar();
+            SmartUploadEquipmentsToServer();
+        }
+
         private static void InitialUpload()
         {
 
@@ -346,7 +356,7 @@ namespace Command
 
         private static void InitialUploadEquipmentListToServer()
         {
-            EqpRepo.AddEquipments(Equipments);
+            EqpRepo.SmartUpdate(Equipments);
         }
 
         private static void UploadEmployees()
@@ -455,6 +465,19 @@ namespace Command
             Console.WriteLine("UPLOADING UPDATES TO SERVER");
             if(EquipmentsToUpdate.Count>0)EqpRepo.UpdateEquipments(EquipmentsToUpdate);
             if (EquipmentsToAdd.Count > 0) EqpRepo.AddEquipments(EquipmentsToAdd);
+
+        }
+
+
+        private static void SmartUploadEquipmentsToServer()
+        {
+            Console.WriteLine();
+           
+            List<Equipment> EquipmentsToAdd = Equipments;
+            int Additions = EquipmentsToAdd.Count;
+            Console.WriteLine("UPLOADING UPDATES TO SERVER");
+         
+            if (EquipmentsToAdd.Count > 0) EqpRepo.SmartUpdate(EquipmentsToAdd);
 
         }
 

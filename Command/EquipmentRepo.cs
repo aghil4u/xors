@@ -16,8 +16,8 @@ namespace Command
 
         public EquipmentRepo()
         {
-             //client.BaseAddress = new Uri("http://mwsams.xo.rs/");
-            client.BaseAddress = new Uri("https://localhost:44363/");
+             client.BaseAddress = new Uri("http://mwsams.xo.rs/");
+            //client.BaseAddress = new Uri("https://localhost:44363/");
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
@@ -78,6 +78,29 @@ namespace Command
                     Console.Write(response.Headers.ToString());
                 }
                 Console.Write("\r ADDING ITEM " + i + "/" + eqpt.Count + " (FAILS " + failCount + ")");
+            }
+
+
+
+        }
+
+        public void SmartUpdate(List<Equipment> eqpt)
+        {
+
+
+            int failCount = 0;
+            for (int i = 0; i < eqpt.Count; i++)
+            {
+                Equipment equipment = eqpt[i];
+
+                HttpResponseMessage response = client.PostAsync("api/Equipments",
+                    new StringContent(JsonConvert.SerializeObject(equipment), Encoding.UTF8, "application/json")).Result;
+                if (!response.IsSuccessStatusCode)
+                {
+                    failCount++;
+                    Console.Write(response.Headers.ToString());
+                }
+                Console.Write("\r SMART UPDATING ITEM " + i + "/" + eqpt.Count + " (FAILS " + failCount + ")");
             }
 
 
