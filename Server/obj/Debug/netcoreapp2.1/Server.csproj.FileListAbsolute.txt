@@ -109,7 +109,6 @@ C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Debug\netcoreapp2.1\Serv
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Debug\netcoreapp2.1\Server.pdb
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Debug\netcoreapp2.1\Server.Views.dll
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Debug\netcoreapp2.1\Server.Views.pdb
-C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.csprojAssemblyReference.cache
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.csproj.CoreCompileInputs.cache
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.RazorAssemblyInfo.cache
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.RazorAssemblyInfo.cs

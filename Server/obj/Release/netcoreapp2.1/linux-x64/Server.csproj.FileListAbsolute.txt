@@ -6,7 +6,6 @@ C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Release\netcoreapp2.1\li
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Release\netcoreapp2.1\linux-x64\Server.pdb
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Release\netcoreapp2.1\linux-x64\Server.Views.dll
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Release\netcoreapp2.1\linux-x64\Server.Views.pdb
-C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\linux-x64\Server.csprojAssemblyReference.cache
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\linux-x64\Server.csproj.CoreCompileInputs.cache
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\linux-x64\Server.RazorAssemblyInfo.cache
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\linux-x64\Server.RazorAssemblyInfo.cs
@@ -34,5 +33,3 @@ C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\li
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\linux-x64\Server.dll
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\linux-x64\Server.pdb
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Release\netcoreapp2.1\linux-x64\Server.csproj.CopyComplete
-C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Release\netcoreapp2.1\linux-x64\libhostpolicy.so
-C:\Users\aghil\Documents\Github\aghil4u\xors\Server\bin\Release\netcoreapp2.1\linux-x64\libhostfxr.so

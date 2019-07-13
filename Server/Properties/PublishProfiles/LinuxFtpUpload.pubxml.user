@@ -11,49 +11,49 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/12/2019 16:32:09</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/12/2019 21:40:32</publishTime>
     </File>
     <File Include="Firebase.Auth.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>10/13/2018 18:15:40</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/26/2018 18:17:04</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.JwtBearer.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/26/2018 18:17:04</publishTime>
     </File>
     <File Include="MySqlConnector.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>06/16/2018 17:14:06</publishTime>
     </File>
     <File Include="Pomelo.EntityFrameworkCore.MySql.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/07/2018 13:32:26</publishTime>
     </File>
     <File Include="Pomelo.JsonObject.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>03/07/2017 20:39:04</publishTime>
     </File>
     <File Include="Server.deps.json">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/13/2019 16:48:22</publishTime>
     </File>
     <File Include="Server.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/13/2019 16:39:40</publishTime>
     </File>
     <File Include="Server.pdb">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/13/2019 16:39:40</publishTime>
     </File>
     <File Include="Server.runtimeconfig.json">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/13/2019 16:48:22</publishTime>
     </File>
     <File Include="Server.Views.dll">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/13/2019 16:39:41</publishTime>
     </File>
     <File Include="Server.Views.pdb">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/13/2019 16:39:41</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>07/12/2019 16:32:10</publishTime>
+      <publishTime>07/13/2019 16:48:22</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>07/12/2019 16:32:10</publishTime>

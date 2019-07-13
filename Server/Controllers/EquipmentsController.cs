@@ -102,11 +102,32 @@ namespace Server.Controllers
             {
                 return  BadRequest(ModelState);
             }
-            equipment.id = _context.Equipment.Last().id + 1;
-     
-            _context.Equipment.Add(equipment);
-            await  _context.SaveChangesAsync();
 
+            Equipment eqp =  _context.Equipment.AsNoTracking().FirstOrDefault(s => s.EquipmentNumber == equipment.EquipmentNumber);
+            if (eqp != null)
+            {
+                equipment.id = eqp.id;
+                _context.Equipment.Update(equipment);
+               // _context.Entry(equipment).State = EntityState.Modified;
+
+                try
+                {
+                    await _context.SaveChangesAsync();
+                }
+                catch
+                {
+
+                }
+
+            }
+            else
+            {
+                equipment.id = _context.Equipment.Last().id + 1;
+
+                _context.Equipment.Add(equipment);
+                await _context.SaveChangesAsync();
+            }
+         
             return  CreatedAtAction("GetEquipment", new { id = equipment.id }, equipment);
         }
 
