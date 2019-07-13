@@ -35,25 +35,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/07/2017 20:39:04</publishTime>
     </File>
     <File Include="Server.deps.json">
-      <publishTime>07/13/2019 16:48:22</publishTime>
+      <publishTime>07/13/2019 16:56:47</publishTime>
     </File>
     <File Include="Server.dll">
-      <publishTime>07/13/2019 16:39:40</publishTime>
+      <publishTime>07/13/2019 16:56:47</publishTime>
     </File>
     <File Include="Server.pdb">
-      <publishTime>07/13/2019 16:39:40</publishTime>
+      <publishTime>07/13/2019 16:56:47</publishTime>
     </File>
     <File Include="Server.runtimeconfig.json">
-      <publishTime>07/13/2019 16:48:22</publishTime>
+      <publishTime>07/13/2019 16:56:47</publishTime>
     </File>
     <File Include="Server.Views.dll">
-      <publishTime>07/13/2019 16:39:41</publishTime>
+      <publishTime>07/13/2019 16:56:47</publishTime>
     </File>
     <File Include="Server.Views.pdb">
-      <publishTime>07/13/2019 16:39:41</publishTime>
+      <publishTime>07/13/2019 16:56:47</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>07/13/2019 16:48:22</publishTime>
+      <publishTime>07/13/2019 16:56:47</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>07/12/2019 16:32:10</publishTime>

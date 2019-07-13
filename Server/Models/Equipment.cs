@@ -31,5 +31,6 @@ namespace Server.Models
         public long TimeStamp { get; set; }
 
         public string plant { get; set; }
+        public string status { get; set; }
     }
 }

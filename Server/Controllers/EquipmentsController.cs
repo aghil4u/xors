@@ -102,30 +102,38 @@ namespace Server.Controllers
             {
                 return  BadRequest(ModelState);
             }
-
-            Equipment eqp =  _context.Equipment.AsNoTracking().FirstOrDefault(s => s.EquipmentNumber == equipment.EquipmentNumber);
-            if (eqp != null)
+            if (_context.Equipment.Count() < 0)
             {
-                equipment.id = eqp.id;
-                _context.Equipment.Update(equipment);
-               // _context.Entry(equipment).State = EntityState.Modified;
-
-                try
-                {
-                    await _context.SaveChangesAsync();
-                }
-                catch
-                {
-
-                }
-
+                equipment.id = 1;
+                _context.Equipment.Add(equipment);
+                await _context.SaveChangesAsync();
             }
             else
             {
-                equipment.id = _context.Equipment.Last().id + 1;
 
-                _context.Equipment.Add(equipment);
-                await _context.SaveChangesAsync();
+                Equipment eqp = _context.Equipment.AsNoTracking().FirstOrDefault(s => s.EquipmentNumber == equipment.EquipmentNumber);
+                if (eqp != null)
+                {
+                    equipment.id = eqp.id;
+                    _context.Equipment.Update(equipment);
+                    // _context.Entry(equipment).State = EntityState.Modified;
+
+                    try
+                    {
+                        await _context.SaveChangesAsync();
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+                else
+                {
+                    equipment.id = _context.Equipment.Last().id + 1;
+                    _context.Equipment.Add(equipment);
+                    await _context.SaveChangesAsync();
+                }
             }
          
             return  CreatedAtAction("GetEquipment", new { id = equipment.id }, equipment);
