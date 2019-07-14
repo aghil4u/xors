@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHlqCLqmn00aDeNnkVtt6jwAAAAACAAAAAAAQZgAAAAEAACAAAABb6qthfFbpwFtJ6IyMyixoDReTcLAMn8PIHaODK3ivfAAAAAAOgAAAAAIAACAAAABg3DXrbkkDYk9xLTfGmcNbSGfUhar0NXHSmK97hhlB5iAAAADHt9EWyZvQ1cOK6fAmWd+MevIsTRyYhvSgBVDICE2vOEAAAAD/HFZTs8y/jt5+4dQenMN2LMp8UPPAnqhjcHCGGdPLKH98riPoU70J2UxGX2cvVRIDo6jpGmx5Lqkex9iQ4gce</EncryptedPassword>
+    <_PublishTargetUrl>ftp://mwsams.xo.rs/publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>07/12/2019 16:32:09</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>07/12/2019 21:40:32</publishTime>
+    </File>
+    <File Include="Firebase.Auth.dll">
+      <publishTime>10/13/2018 18:15:40</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.dll">
+      <publishTime>07/26/2018 18:17:04</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.Authentication.JwtBearer.dll">
+      <publishTime>07/26/2018 18:17:04</publishTime>
+    </File>
+    <File Include="MySqlConnector.dll">
+      <publishTime>06/16/2018 17:14:06</publishTime>
+    </File>
+    <File Include="Pomelo.EntityFrameworkCore.MySql.dll">
+      <publishTime>07/07/2018 13:32:26</publishTime>
+    </File>
+    <File Include="Pomelo.JsonObject.dll">
+      <publishTime>03/07/2017 20:39:04</publishTime>
+    </File>
+    <File Include="Server.deps.json">
+      <publishTime>07/13/2019 16:56:47</publishTime>
+    </File>
+    <File Include="Server.dll">
+      <publishTime>07/13/2019 16:56:47</publishTime>
+    </File>
+    <File Include="Server.pdb">
+      <publishTime>07/13/2019 16:56:47</publishTime>
+    </File>
+    <File Include="Server.runtimeconfig.json">
+      <publishTime>07/13/2019 16:56:47</publishTime>
+    </File>
+    <File Include="Server.Views.dll">
+      <publishTime>07/13/2019 16:56:47</publishTime>
+    </File>
+    <File Include="Server.Views.pdb">
+      <publishTime>07/13/2019 16:56:47</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>07/13/2019 16:56:47</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.min.css">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner1.svg">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner2.svg">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/images/banner3.svg">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/js/site.min.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/dist/js/npm.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bootstrap/LICENSE">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery-validation/LICENSE.md">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.js">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/dist/jquery.min.map">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+    <File Include="wwwroot/lib/jquery/LICENSE.txt">
+      <publishTime>07/12/2019 16:32:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

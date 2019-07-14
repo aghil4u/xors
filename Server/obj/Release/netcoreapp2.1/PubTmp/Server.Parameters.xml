@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="mwsams.xo.rs" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\OFFICE\\CODEBASE\\VS\\xors\\Server\\obj\\Release\\netcoreapp2\.1\\PubTmp\\Out\\$" />
-  </parameter>
-</parameters>

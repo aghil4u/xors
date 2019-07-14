@@ -6,13 +6,9 @@ namespace Server.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropIndex(
-                name: "UserNameIndex",
-                table: "AspNetUsers");
+            
 
-            migrationBuilder.DropIndex(
-                name: "RoleNameIndex",
-                table: "AspNetRoles");
+           
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
@@ -29,13 +25,9 @@ namespace Server.Data.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropIndex(
-                name: "UserNameIndex",
-                table: "AspNetUsers");
+           
 
-            migrationBuilder.DropIndex(
-                name: "RoleNameIndex",
-                table: "AspNetRoles");
+            
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",

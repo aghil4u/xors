@@ -96,17 +96,47 @@ namespace Server.Controllers
 
         // POST: api/Equipments
         [HttpPost]
-        public async Task<IActionResult> PostEquipment([FromBody] Equipment equipment)
+        public  async Task<IActionResult> PostEquipment([FromBody] Equipment equipment)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return  BadRequest(ModelState);
             }
-            equipment.id = _context.Equipment.Last().id + 1;
-            _context.Equipment.Add(equipment);
-            await _context.SaveChangesAsync();
+            if (_context.Equipment.Count() < 0)
+            {
+                equipment.id = 1;
+                _context.Equipment.Add(equipment);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
 
-            return CreatedAtAction("GetEquipment", new { id = equipment.id }, equipment);
+                Equipment eqp = _context.Equipment.AsNoTracking().FirstOrDefault(s => s.EquipmentNumber == equipment.EquipmentNumber);
+                if (eqp != null)
+                {
+                    equipment.id = eqp.id;
+                    _context.Equipment.Update(equipment);
+                    // _context.Entry(equipment).State = EntityState.Modified;
+
+                    try
+                    {
+                        await _context.SaveChangesAsync();
+                    }
+                    catch
+                    {
+
+                    }
+
+                }
+                else
+                {
+                    equipment.id = _context.Equipment.Last().id + 1;
+                    _context.Equipment.Add(equipment);
+                    await _context.SaveChangesAsync();
+                }
+            }
+         
+            return  CreatedAtAction("GetEquipment", new { id = equipment.id }, equipment);
         }
 
         // DELETE: api/Equipments/5
