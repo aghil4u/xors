@@ -22,8 +22,8 @@ namespace Command
         private static EquipmentRepo EqpRepo;
         private static EmployeeRepo EmpRepo;
         public static string BaseDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.Parent.Parent.Parent.Parent.ToString();
-        public static string FAR = BaseDirectory+@"\ASSETS\FAR 3010.xlsx";
-        public static string EQM = BaseDirectory+@"\ASSETS\EQM 3010.xlsx";
+        public static string FAR = BaseDirectory+@"\ASSETS\FAR 2200.xlsx";
+        public static string EQM = BaseDirectory+@"\ASSETS\EQM 2200.xlsx";
         public static string EMP = BaseDirectory+@"\OTHERS\EMPLIST.xlsx";
         public static List<Equipment> ETEMP = new List<Equipment>();
         public static List<Equipment> Equipments = new List<Equipment>();

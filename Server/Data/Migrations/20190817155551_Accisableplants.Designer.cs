@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Server.Data;
 
 namespace Server.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190817155551_Accisableplants")]
+    partial class Accisableplants
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -133,15 +135,9 @@ namespace Server.Data.Migrations
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("AccesibleFunctions");
-
-                    b.Property<string>("AccesibleLocations");
-
                     b.Property<string>("AccesiblePlants");
 
                     b.Property<int>("AccessFailedCount");
-
-                    b.Property<string>("Authority");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();

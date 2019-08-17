@@ -8,3 +8,4 @@ C:\Users\aghil\Documents\Github\aghil4u\xors\Command\obj\Debug\netcoreapp2.2\Com
 C:\Users\aghil\Documents\Github\aghil4u\xors\Command\obj\Debug\netcoreapp2.2\Command.AssemblyInfo.cs
 C:\Users\aghil\Documents\Github\aghil4u\xors\Command\obj\Debug\netcoreapp2.2\Command.dll
 C:\Users\aghil\Documents\Github\aghil4u\xors\Command\obj\Debug\netcoreapp2.2\Command.pdb
+C:\Users\aghil\Documents\Github\aghil4u\xors\Command\obj\Debug\netcoreapp2.2\Command.csprojAssemblyReference.cache

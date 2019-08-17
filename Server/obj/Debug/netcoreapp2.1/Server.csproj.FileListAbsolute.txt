@@ -136,3 +136,4 @@ C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Serv
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.dll
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.pdb
 C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.csproj.CopyComplete
+C:\Users\aghil\Documents\Github\aghil4u\xors\Server\obj\Debug\netcoreapp2.1\Server.csprojAssemblyReference.cache

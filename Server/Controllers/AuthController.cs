@@ -18,13 +18,13 @@ namespace Server.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private UserManager<IdentityUser> userManager;
+        private UserManager<ApplicationUser> userManager;
 
         private readonly ApplicationDbContext _context;
 
         public object SecuritAlgorithms { get; private set; }
 
-        public AuthController( UserManager<IdentityUser> manager)
+        public AuthController( UserManager<ApplicationUser> manager)
         {
             userManager = manager;
     }
