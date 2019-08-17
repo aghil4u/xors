@@ -434,11 +434,12 @@ namespace Command
                     if (eServer!=null)
                     {
                         if (eServer.EquipmentDescription != eLocal.EquipmentDescription ||
-                            eServer.AssetDescription != eLocal.AssetDescription || eServer.OperationId != eLocal.OperationId)
+                            eServer.AssetDescription != eLocal.AssetDescription || eServer.OperationId != eLocal.OperationId || eServer.SubType!=eLocal.SubType)
                         {
                             eServer.EquipmentDescription = eLocal.EquipmentDescription;
                             eServer.AssetDescription = eLocal.AssetDescription;
                             eServer.OperationId = eLocal.OperationId;
+                            eServer.SubType = eLocal.SubType;
                             DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
                             eServer.TimeStamp = (long)((DateTime.Now.ToUniversalTime() - epoch).TotalMilliseconds);
                             EquipmentsToUpdate.Add(eServer);
@@ -493,14 +494,15 @@ namespace Command
                 {
                     Equipments[i].EquipmentNumber = e.EquipmentNumber;
                     Equipments[i].EquipmentDescription = e.EquipmentDescription.Trim();
-                    Equipments[i].OperationId = e.OperationId;
+                   // Equipments[i].OperationId = e.OperationId;
                     Equipments[i].SubType = e.SubType;
                     Equipments[i].Weight = e.Weight;
                     Equipments[i].WeightUnit = e.WeightUnit;
                     Equipments[i].Dimensions = e.Dimensions;
                     Equipments[i].ModelNumber = e.ModelNumber;
                     Equipments[i].SerialNumber = e.SerialNumber;
-                    Equipments[i].EquipmentLocation = e.EquipmentLocation;
+                    Equipments[i].EquipmentLocation = Equipments[i].EquipmentLocation;
+
 
 
                     Console.Write("\r PROCESSING EQM AND FAR " + q);
