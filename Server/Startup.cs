@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Server.Models;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace Server
 {
@@ -60,6 +62,13 @@ namespace Server
             app.UseCookiePolicy();
 
             app.UseAuthentication( );
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @".well-known")),
+                RequestPath = new PathString("/.well-known"),
+                ServeUnknownFileTypes = true // serve extensionless file
+            });
 
             app.UseMvc(routes =>
             {
