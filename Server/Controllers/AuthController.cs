@@ -59,8 +59,11 @@ namespace Server.Controllers
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(token),
                     userName = user.UserName,
-                    expiration = token.ValidTo
-                });
+                    expiration = token.ValidTo,
+                    plants = user.AccesiblePlants,
+                    locations = user.AccesibleLocations,
+                    auth = user.Authority,
+                }) ;
             }
 
             return Unauthorized();

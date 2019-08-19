@@ -7,7 +7,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHlqCLqmn00aDeNnkVtt6jwAAAAACAAAAAAAQZgAAAAEAACAAAABb6qthfFbpwFtJ6IyMyixoDReTcLAMn8PIHaODK3ivfAAAAAAOgAAAAAIAACAAAABg3DXrbkkDYk9xLTfGmcNbSGfUhar0NXHSmK97hhlB5iAAAADHt9EWyZvQ1cOK6fAmWd+MevIsTRyYhvSgBVDICE2vOEAAAAD/HFZTs8y/jt5+4dQenMN2LMp8UPPAnqhjcHCGGdPLKH98riPoU70J2UxGX2cvVRIDo6jpGmx5Lqkex9iQ4gce</EncryptedPassword>
-    <_PublishTargetUrl>ftp://mwsams.xo.rs/publish</_PublishTargetUrl>
+    <_PublishTargetUrl>ftp://mwsams.xo.rs</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
@@ -35,25 +35,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/07/2017 20:39:04</publishTime>
     </File>
     <File Include="Server.deps.json">
-      <publishTime>08/17/2019 21:31:30</publishTime>
+      <publishTime>08/19/2019 20:35:08</publishTime>
     </File>
     <File Include="Server.dll">
-      <publishTime>08/17/2019 21:31:29</publishTime>
+      <publishTime>08/19/2019 20:35:07</publishTime>
     </File>
     <File Include="Server.pdb">
-      <publishTime>08/17/2019 21:31:29</publishTime>
+      <publishTime>08/19/2019 20:35:07</publishTime>
     </File>
     <File Include="Server.runtimeconfig.json">
-      <publishTime>08/17/2019 21:31:30</publishTime>
+      <publishTime>08/19/2019 20:35:09</publishTime>
     </File>
     <File Include="Server.Views.dll">
-      <publishTime>08/17/2019 21:31:30</publishTime>
+      <publishTime>08/19/2019 20:35:08</publishTime>
     </File>
     <File Include="Server.Views.pdb">
-      <publishTime>08/17/2019 21:31:30</publishTime>
+      <publishTime>08/19/2019 20:35:08</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>08/17/2019 21:31:30</publishTime>
+      <publishTime>08/19/2019 20:35:09</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>08/17/2019 20:03:48</publishTime>

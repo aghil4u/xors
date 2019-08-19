@@ -40,6 +40,17 @@ namespace Server.Controllers
 
         }
 
+
+        [HttpGet("plants/{plantString}")]
+        public IEnumerable<Equipment> GetEquipmentAsync([FromRoute] String plantString)
+        {
+            String[] plants = plantString.Split(',');
+            var equipments = _context.Equipment.Where(e => Array.Exists(plants, element => element == e.plant));
+
+            return equipments;
+
+        }
+
         // GET: api/Equipments/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetEquipment([FromRoute] int id)
